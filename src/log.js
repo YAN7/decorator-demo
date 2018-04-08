@@ -2,7 +2,7 @@
  * @Author: YAN7
  * @Date: 2018-04-08 10:36:34
  * @Last Modified by: YAN7
- * @Last Modified time: 2018-04-08 11:58:51
+ * @Last Modified time: 2018-04-08 12:21:02
  */
 /**
  * @param {*} type: 传入参数
@@ -12,7 +12,7 @@
  */
 const log = type => (target, name, descriptor) => {
   const method = descriptor.value; // 缓存被装饰的函数
-  console.log('name', descriptor.value);
+  console.log('name', descriptor);
   descriptor.value = (...args) => {  // 改写被装饰的函数
     console.info(`(${type}) 正在执行: ${name}(${args}) = ?`);
     let ret;

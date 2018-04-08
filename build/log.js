@@ -39,7 +39,7 @@ function _applyDecoratedDescriptor(target, property, decorators, descriptor, con
  * @Author: YAN7
  * @Date: 2018-04-08 10:36:34
  * @Last Modified by: YAN7
- * @Last Modified time: 2018-04-08 11:58:51
+ * @Last Modified time: 2018-04-08 12:20:41
  */
 /**
  * @param {*} type: 传入参数
@@ -50,7 +50,7 @@ function _applyDecoratedDescriptor(target, property, decorators, descriptor, con
 var log = function log(type) {
   return function (target, name, descriptor) {
     var method = descriptor.value; // 缓存被装饰的函数
-    console.log('name', descriptor.value);
+    console.log('name', descriptor);
     descriptor.value = function () {
       for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
         args[_key] = arguments[_key];
